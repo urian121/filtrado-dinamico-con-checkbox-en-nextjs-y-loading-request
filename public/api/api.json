@@ -1,0 +1,275 @@
+{
+  "listaJugadores": [
+    {
+      "imgSrc": "https://ak-static.cms.nba.com/wp-content/uploads/headshots/nba/latest/260x190/202326.png",
+      "nombre": "DeMarcus Cousins",
+      "numero": "#0",
+      "posicion": "Center",
+      "estadisticas": "25.2 PPG 5.4 APG 12.9 RPG",
+      "nombreDelEquipo": "[New Orleans Pelicans]",
+      "informacion": "INJURED | Four-time All-Star | No. 5 overall pick in 2010"
+    },
+    {
+      "imgSrc": "https://ak-static.cms.nba.com/wp-content/uploads/headshots/nba/latest/260x190/203076.png",
+      "nombre": "Anthony Davis",
+      "numero": "#23",
+      "posicion": "Center",
+      "estadisticas": "27.1 PPG 2.4 APG 10.7 RPG",
+      "nombreDelEquipo": "[New Orleans Pelicans]",
+      "informacion": "Five-time All-Star | Scored 52 points in 2017 All-Star Game"
+    },
+    {
+      "imgSrc": "https://ak-static.cms.nba.com/wp-content/uploads/headshots/nba/latest/260x190/201142.png",
+      "nombre": "Kevin Durant",
+      "numero": "#35",
+      "posicion": "Forward",
+      "estadisticas": "25.5 PPG 5.5 APG 6.8 RPG",
+      "nombreDelEquipo": "[Golden State Warriors]",
+      "informacion": "Nine-time All-Star | 2014 Kia NBA MVP | 2017 Finals MVP"
+    },
+    {
+      "imgSrc": "https://ak-static.cms.nba.com/wp-content/uploads/headshots/nba/latest/260x190/202681.png",
+      "nombre": "Kyrie Irving",
+      "numero": "#11",
+      "posicion": "Guard",
+      "estadisticas": "24.6 PPG 5 APG 3.6 RPG",
+      "nombreDelEquipo": "[Boston Celtics]",
+      "informacion": "Five-time All-Star | 2014 Kia All-Star Game MVP"
+    },
+    {
+      "imgSrc": "https://ak-static.cms.nba.com/wp-content/uploads/headshots/nba/latest/260x190/2544.png",
+      "nombre": "LeBron James",
+      "numero": "#23",
+      "posicion": "Forward",
+      "estadisticas": "26.5 PPG 8.9 APG 8.1 RPG",
+      "nombreDelEquipo": "[Cleveland Cavaliers]",
+      "informacion": "CAPTAIN | 14-time All-Star | Four-time Kia NBA MVP"
+    },
+    {
+      "imgSrc": "https://ak-static.cms.nba.com/wp-content/uploads/headshots/nba/latest/260x190/200746.png",
+      "nombre": "LaMarcus Aldridge",
+      "numero": "#12",
+      "posicion": "Forward",
+      "estadisticas": "22.4 PPG 2 APG 8.4 RPG",
+      "nombreDelEquipo": "[San Antonio Spurs]",
+      "informacion": "Six-time All-Star | 2014-15 Second Team All-NBA"
+    },
+    {
+      "imgSrc": "https://ak-static.cms.nba.com/wp-content/uploads/headshots/nba/latest/260x190/203507.png",
+      "nombre": "Giannis Antetokounmpo",
+      "numero": "#34",
+      "posicion": "Forward",
+      "estadisticas": "27.6 PPG 4.7 APG 10.4 RPG",
+      "nombreDelEquipo": "[Milwaukee Bucks]",
+      "informacion": "Two-time All-Star | Consecutive All-Star starter"
+    },
+    {
+      "imgSrc": "https://ak-static.cms.nba.com/wp-content/uploads/headshots/nba/latest/260x190/201939.png",
+      "nombre": "Stephen Curry",
+      "numero": "#30",
+      "posicion": "Guard",
+      "estadisticas": "26.8 PPG 6.5 APG 5.2 RPG",
+      "nombreDelEquipo": "[Golden State Warriors]",
+      "informacion": "CAPTAIN | Five-time All-Star | Two-time Kia NBA MVP"
+    },
+    {
+      "imgSrc": "https://ak-static.cms.nba.com/wp-content/uploads/headshots/nba/latest/260x190/201942.png",
+      "nombre": "DeMar DeRozan",
+      "numero": "#10",
+      "posicion": "Guard",
+      "estadisticas": "24 PPG 5.1 APG 4 RPG",
+      "nombreDelEquipo": "[Toronto Raptors]",
+      "informacion": "Four-time All-Star | Toronto's all-time leading scorer"
+    },
+    {
+      "imgSrc": "https://ak-static.cms.nba.com/wp-content/uploads/headshots/nba/latest/260x190/203954.png",
+      "nombre": "Joel Embiid",
+      "numero": "#21",
+      "posicion": "Center",
+      "estadisticas": "23.7 PPG 3.1 APG 11.1 RPG",
+      "nombreDelEquipo": "[Philadelphia 76ers]",
+      "informacion": "PHI First-time All-Star | 2016-17 First Team All-Rookie"
+    },
+    {
+      "imgSrc": "https://ak-static.cms.nba.com/wp-content/uploads/headshots/nba/latest/260x190/201609.png",
+      "nombre": "Goran Dragic",
+      "numero": "#7",
+      "posicion": "Guard",
+      "estadisticas": "17.4 PPG 4.8 APG 4 RPG",
+      "nombreDelEquipo": "[Miami Heat]",
+      "informacion": "First-time All-Star | First player from Slovenia to earn All-Star honor"
+    },
+    {
+      "imgSrc": "https://ak-static.cms.nba.com/wp-content/uploads/headshots/nba/latest/260x190/203078.png",
+      "nombre": "Bradley Beal",
+      "numero": "#3",
+      "posicion": "Guard",
+      "estadisticas": "30.5 PPG 4.8 APG 4.2 RPG",
+      "nombreDelEquipo": "[Washington Wizards]",
+      "informacion": "Two-time All-Star | Scored career-high 51 points in 2017"
+    },
+    {
+      "imgSrc": "https://ak-static.cms.nba.com/wp-content/uploads/headshots/nba/latest/260x190/1628389.png",
+      "nombre": "Ben Simmons",
+      "numero": "#25",
+      "posicion": "Guard",
+      "estadisticas": "16.9 PPG 8.8 APG 8.2 RPG",
+      "nombreDelEquipo": "[Philadelphia 76ers]",
+      "informacion": "2018 Kia NBA Rookie of the Year | Triple-double threat"
+    },
+    {
+      "imgSrc": "https://ak-static.cms.nba.com/wp-content/uploads/headshots/nba/latest/260x190/1629029.png",
+      "nombre": "Jayson Tatum",
+      "numero": "#0",
+      "posicion": "Forward",
+      "estadisticas": "23.4 PPG 3.9 APG 7 RPG",
+      "nombreDelEquipo": "[Boston Celtics]",
+      "informacion": "2017-18 Kia NBA All-Rookie First Team | Rising star"
+    },
+    {
+      "imgSrc": "https://ak-static.cms.nba.com/wp-content/uploads/headshots/nba/latest/260x190/203954.png",
+      "nombre": "Karl-Anthony Towns",
+      "numero": "#32",
+      "posicion": "Forward",
+      "estadisticas": "25.1 PPG 4.4 APG 12.3 RPG",
+      "nombreDelEquipo": "[Minnesota Timberwolves]",
+      "informacion": "Two-time All-Star | 2015-16 Kia NBA Rookie of the Year"
+    },
+    {
+      "imgSrc": "https://ak-static.cms.nba.com/wp-content/uploads/headshots/nba/latest/260x190/203081.png",
+      "nombre": "Russell Westbrook",
+      "numero": "#0",
+      "posicion": "Guard",
+      "estadisticas": "22.9 PPG 11.3 APG 11.1 RPG",
+      "nombreDelEquipo": "[Oklahoma City Thunder]",
+      "informacion": "Eight-time All-Star | 2016-17 Kia NBA MVP"
+    },
+
+    {
+      "imgSrc": "https://ak-static.cms.nba.com/wp-content/uploads/headshots/nba/latest/260x190/203083.png",
+      "nombre": "Andre Drummond",
+      "numero": "#0",
+      "posicion": "Center",
+      "estadisticas": "15.1 PPG 3.7 APG 15.7 RPG",
+      "nombreDelEquipo": "[Detroit Pistons]",
+      "informacion": "Second-time All-Star | 2015-16 NBA rebounding leader"
+    },
+    {
+      "imgSrc": "https://ak-static.cms.nba.com/wp-content/uploads/headshots/nba/latest/260x190/201935.png",
+      "nombre": "James Harden",
+      "numero": "#13",
+      "posicion": "Guard",
+      "estadisticas": "31.4 PPG 9 APG 5 RPG",
+      "nombreDelEquipo": "[Houston Rockets]",
+      "informacion": "Six-time All-Star | Leads NBA in scoring this season"
+    },
+    {
+      "imgSrc": "https://ak-static.cms.nba.com/wp-content/uploads/headshots/nba/latest/260x190/202710.png",
+      "nombre": "Jimmy Butler",
+      "numero": "#23",
+      "posicion": "Guard",
+      "estadisticas": "22.4 PPG 5 APG 5.5 RPG",
+      "nombreDelEquipo": "[Minnesota Timberwolves]",
+      "informacion": "Four-time All-Star | 2015 Kia NBA Most Improved Player"
+    },
+    {
+      "imgSrc": "https://ak-static.cms.nba.com/wp-content/uploads/headshots/nba/latest/260x190/203110.png",
+      "nombre": "Draymond Green",
+      "numero": "#23",
+      "posicion": "Forward",
+      "estadisticas": "11.3 PPG 7.3 APG 7.9 RPG",
+      "nombreDelEquipo": "[Golden State Warriors]",
+      "informacion": "Three-time All-Star | 2016-17 Kia Defensive Player of the Year"
+    },
+    {
+      "imgSrc": "https://ak-static.cms.nba.com/wp-content/uploads/headshots/nba/latest/260x190/201143.png",
+      "nombre": "Al Horford",
+      "numero": "#42",
+      "posicion": "Forward",
+      "estadisticas": "13.2 PPG 5.2 APG 7.8 RPG",
+      "nombreDelEquipo": "[Boston Celtics]",
+      "informacion": "Five-time All-Star | No. 3 overall pick in 2007"
+    },
+    {
+      "imgSrc": "https://ak-static.cms.nba.com/wp-content/uploads/headshots/nba/latest/260x190/203081.png",
+      "nombre": "Damian Lillard",
+      "numero": "#0",
+      "posicion": "Guard",
+      "estadisticas": "25.8 PPG 6.5 APG 4.5 RPG",
+      "nombreDelEquipo": "[Portland Trail Blazers]",
+      "informacion": "Three-time All-Star | 2013 Kia Rookie of the Year"
+    },
+    {
+      "imgSrc": "https://ak-static.cms.nba.com/wp-content/uploads/headshots/nba/latest/260x190/200768.png",
+      "nombre": "Kyle Lowry",
+      "numero": "#7",
+      "posicion": "Guard",
+      "estadisticas": "16.5 PPG 6.4 APG 5.7 RPG",
+      "nombreDelEquipo": "[Toronto Raptors]",
+      "informacion": "Four-time All-Star | 2015-16 Third Team All-NBA"
+    },
+    {
+      "imgSrc": "https://ak-static.cms.nba.com/wp-content/uploads/headshots/nba/latest/260x190/202691.png",
+      "nombre": "Klay Thompson",
+      "numero": "#11",
+      "posicion": "Guard",
+      "estadisticas": "20.1 PPG 2.6 APG 3.9 RPG",
+      "nombreDelEquipo": "[Golden State Warriors]",
+      "informacion": "Four-time All-Star | 2016 Three-Point Contest Champion"
+    },
+    {
+      "imgSrc": "https://ak-static.cms.nba.com/wp-content/uploads/headshots/nba/latest/260x190/202331.png",
+      "nombre": "Paul George",
+      "numero": "#13",
+      "posicion": "Forward",
+      "estadisticas": "22.4 PPG 3.1 APG 5.4 RPG",
+      "nombreDelEquipo": "[Oklahoma City Thunder]",
+      "informacion": "Five-time All-Star, third in a row | Three-time Third Team All-NBA"
+    },
+    {
+      "imgSrc": "https://ak-static.cms.nba.com/wp-content/uploads/headshots/nba/latest/260x190/201567.png",
+      "nombre": "Kevin Love",
+      "numero": "#0",
+      "posicion": "Center",
+      "estadisticas": "17.9 PPG 1.6 APG 9.4 RPG",
+      "nombreDelEquipo": "[Cleveland Cavaliers]",
+      "informacion": "INJURED | Five-time All-Star | 2011 Kia NBA Most Improved Player"
+    },
+    {
+      "imgSrc": "https://ak-static.cms.nba.com/wp-content/uploads/headshots/nba/latest/260x190/203506.png",
+      "nombre": "Victor Oladipo",
+      "numero": "#4",
+      "posicion": "Guard",
+      "estadisticas": "24.4 PPG 4.1 APG 5.4 RPG",
+      "nombreDelEquipo": "[Indiana Pacers]",
+      "informacion": "First-time All-Star | No. 2 overall pick in 2013"
+    },
+    {
+      "imgSrc": "https://ak-static.cms.nba.com/wp-content/uploads/headshots/nba/latest/260x190/204001.png",
+      "nombre": "Kristaps Porzingis",
+      "numero": "#6",
+      "posicion": "Center",
+      "estadisticas": "22.7 PPG 1.2 APG 6.6 RPG",
+      "nombreDelEquipo": "[New York Knicks]",
+      "informacion": "INJURED | First-time All-Star | 2017 Taco Bell Skills Challenge champ"
+    },
+    {
+      "imgSrc": "https://ak-static.cms.nba.com/wp-content/uploads/headshots/nba/latest/260x190/202689.png",
+      "nombre": "Kemba Walker",
+      "numero": "#15",
+      "posicion": "Guard",
+      "estadisticas": "22.9 PPG 5.8 APG 3.3 RPG",
+      "nombreDelEquipo": "[Charlotte Hornets]",
+      "informacion": "Second-time All-Star | Hornets' all-time leader in 3-pointers made"
+    },
+    {
+      "imgSrc": "https://ak-static.cms.nba.com/wp-content/uploads/headshots/nba/latest/260x190/202322.png",
+      "nombre": "John Wall",
+      "numero": "#2",
+      "posicion": "Guard",
+      "estadisticas": "19.4 PPG 9.3 APG 3.6 RPG",
+      "nombreDelEquipo": "[Washington Wizards]",
+      "informacion": "INJURED | Five-time All-Star | No. 1 overall pick in 2010"
+    }
+  ]
+}

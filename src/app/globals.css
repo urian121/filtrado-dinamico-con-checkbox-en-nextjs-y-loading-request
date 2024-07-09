@@ -1,0 +1,143 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  margin: 0 auto;
+  width: 90%;
+  justify-items: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 1em;
+}
+
+.header-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px; /* Espacio entre los elementos */
+  margin-bottom: 20px;
+  border-bottom: 3px dashed #dddbdb;
+  padding: 0px 0px 10px 0px;
+}
+
+.header-container ul {
+  display: flex;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.header-container li {
+  margin-right: 10px;
+}
+
+.header-container input[type="checkbox"] {
+  margin-right: 5px;
+}
+
+.flex-container {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-around;
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+.flex-item {
+  padding: 10px;
+  width: 300px;
+  margin-top: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.flex-item:hover {
+  transform: translateY(-5px);
+  cursor: pointer;
+}
+
+.flex-item h3 {
+  margin-bottom: 0.5em;
+}
+
+.flex-item p {
+  margin: 0.25em 0;
+}
+/** custom input tipo checkbox */
+.switch {
+  position: relative;
+  display: inline-block;
+}
+.switch-input {
+  display: none;
+}
+.switch-label {
+  display: block;
+  width: 48px;
+  height: 24px;
+  text-indent: -150%;
+  clip: rect(0 0 0 0);
+  color: transparent;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+.switch-label:before,
+.switch-label:after {
+  content: "";
+  display: block;
+  position: absolute;
+  cursor: pointer;
+}
+.switch-label:before {
+  width: 100%;
+  height: 100%;
+  background-color: #dedede;
+  border-radius: 9999em;
+  transition: background-color 0.25s ease;
+}
+.switch-label:after {
+  top: 0;
+  left: 0;
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  background-color: #fff;
+  box-shadow: 0 0 2px rgba(0, 0, 0, 0.45);
+  transition: left 0.25s ease;
+}
+.switch-input:checked + .switch-label:before {
+  background-color: #8bbc05;
+}
+.switch-input:checked + .switch-label:after {
+  left: 24px;
+}
+li {
+  font-weight: bold;
+}
+.position_center {
+  background-color: #8bbc05;
+  color: white;
+  padding: 5px 10px;
+  border-radius: 5px;
+}
+.position_guard {
+  background-color: #f0ad4e;
+  color: white;
+  padding: 5px 10px;
+  border-radius: 5px;
+}
+.position_forward {
+  background-color: #d9534f;
+  color: white;
+  padding: 5px 10px;
+  border-radius: 5px;
+}
