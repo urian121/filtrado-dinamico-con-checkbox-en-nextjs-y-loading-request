@@ -65,6 +65,7 @@
 
 .flex-item h3 {
   margin-bottom: 0.5em;
+  border-bottom: 1px solid #ccc;
 }
 
 .flex-item p {
@@ -119,9 +120,6 @@
 }
 .switch-input:checked + .switch-label:after {
   left: 24px;
-}
-li {
-  font-weight: bold;
 }
 .position_center {
   background-color: #8bbc05;

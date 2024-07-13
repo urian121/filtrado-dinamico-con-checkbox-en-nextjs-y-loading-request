@@ -28,7 +28,8 @@ const Jugadores = () => {
     const { name, checked } = event.target;
 
     showLoading({
-      message: "Cargando Jugadores por Posiciones...",
+      message: "Cargando Jugadores...",
+      textLoadingSize: "25px",
     });
 
     setPosiciones((prevPosiciones) => ({
