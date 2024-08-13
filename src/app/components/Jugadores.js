@@ -15,7 +15,9 @@ const Jugadores = () => {
     Forward: false,
   });
 
-  {/* Cargando la lista de jugadores desde un archivo JSON al montar el componente y actualizando el estado con los datos obtenidos. */}
+  {
+    /* Cargando la lista de jugadores desde un archivo JSON al montar el componente y actualizando el estado con los datos obtenidos. */
+  }
   useEffect(() => {
     const fetchJugadores = async () => {
       const response = await fetch("/api/api.json");
@@ -26,8 +28,10 @@ const Jugadores = () => {
     fetchJugadores();
   }, []);
 
- {/* Función para manejar los cambios en los checkboxes, actualiza el estado de las posiciones y muestra 
-  un indicador de carga mientras se actualizan los filtros. */}
+  {
+    /* Función para manejar los cambios en los checkboxes, actualiza el estado de las posiciones y muestra 
+  un indicador de carga mientras se actualizan los filtros. */
+  }
   const handleCheckboxChange = (event) => {
     const { name, checked } = event.target;
 
@@ -36,18 +40,22 @@ const Jugadores = () => {
       textLoadingSize: "25px",
     });
 
-    {/*  
+    {
+      /*  
       Actualiza el estado de las posiciones, manteniendo los valores anteriores y ajustando solo el campo correspondiente al nombre del checkbox.
-      */}
+      */
+    }
     setPosiciones((prevPosiciones) => ({
       ...prevPosiciones,
       [name]: checked,
     }));
 
-    hideLoading({ timeLoading: 1000 });
+    hideLoading({ timeLoading: 500 });
   };
 
-  { /* Filtrando la lista de jugadores según las posiciones seleccionadas.Solo se incluyen jugadores que coincidan con las posiciones activas en los filtros. */}
+  {
+    /* Filtrando la lista de jugadores según las posiciones seleccionadas.Solo se incluyen jugadores que coincidan con las posiciones activas en los filtros. */
+  }
   const filteredJugadores = jugadores.filter((jugador) => {
     const { Center, Guard, Forward } = posiciones;
     if (Center || Guard || Forward) {
