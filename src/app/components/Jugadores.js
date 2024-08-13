@@ -7,7 +7,7 @@ import { showLoading, hideLoading } from "loading-request";
 import "loading-request/dist/index.css";
 
 const Jugadores = () => {
-  const [jugadores, setJugadores] = useState([]); // Variables de stado para almacenar la lista de jugadores.
+  const [jugadores, setJugadores] = useState([]); // Variables de estado para almacenar la lista de jugadores.
   // Variables de estado para gestionar los filtros de posiciones seleccionadas.
   const [posiciones, setPosiciones] = useState({
     Center: false,
@@ -54,7 +54,9 @@ const Jugadores = () => {
   };
 
   {
-    /* Filtrando la lista de jugadores según las posiciones seleccionadas.Solo se incluyen jugadores que coincidan con las posiciones activas en los filtros. */
+    /* Filtrando la lista de jugadores según las posiciones seleccionadas. 
+    Solo se incluyen jugadores que coincidan con las posiciones activas en los filtros.
+    */
   }
   const filteredJugadores = jugadores.filter((jugador) => {
     const { Center, Guard, Forward } = posiciones;
