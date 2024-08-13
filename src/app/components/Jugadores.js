@@ -7,13 +7,15 @@ import { showLoading, hideLoading } from "loading-request";
 import "loading-request/dist/index.css";
 
 const Jugadores = () => {
-  const [jugadores, setJugadores] = useState([]);
+  const [jugadores, setJugadores] = useState([]); // Variables de stado para almacenar la lista de jugadores.
+  // Variables de estado para gestionar los filtros de posiciones seleccionadas.
   const [posiciones, setPosiciones] = useState({
     Center: false,
     Guard: false,
     Forward: false,
   });
 
+  {/* Cargando la lista de jugadores desde un archivo JSON al montar el componente y actualizando el estado con los datos obtenidos. */}
   useEffect(() => {
     const fetchJugadores = async () => {
       const response = await fetch("/api/api.json");
@@ -24,6 +26,8 @@ const Jugadores = () => {
     fetchJugadores();
   }, []);
 
+ {/* Función para manejar los cambios en los checkboxes, actualiza el estado de las posiciones y muestra 
+  un indicador de carga mientras se actualizan los filtros. */}
   const handleCheckboxChange = (event) => {
     const { name, checked } = event.target;
 
@@ -32,6 +36,9 @@ const Jugadores = () => {
       textLoadingSize: "25px",
     });
 
+    {/*  
+      Actualiza el estado de las posiciones, manteniendo los valores anteriores y ajustando solo el campo correspondiente al nombre del checkbox.
+      */}
     setPosiciones((prevPosiciones) => ({
       ...prevPosiciones,
       [name]: checked,
@@ -40,6 +47,7 @@ const Jugadores = () => {
     hideLoading({ timeLoading: 1000 });
   };
 
+  { /* Filtrando la lista de jugadores según las posiciones seleccionadas.Solo se incluyen jugadores que coincidan con las posiciones activas en los filtros. */}
   const filteredJugadores = jugadores.filter((jugador) => {
     const { Center, Guard, Forward } = posiciones;
     if (Center || Guard || Forward) {
@@ -51,59 +59,37 @@ const Jugadores = () => {
     }
     return true;
   });
+
+  // Array que define las opciones de posiciones con id, nombre y etiqueta.
+  const posicionesOptions = [
+    { id: "switch-1", name: "Center", label: "Center" },
+    { id: "switch-2", name: "Guard", label: "Guard" },
+    { id: "switch-3", name: "Forward", label: "Forward" },
+  ];
   return (
     <div className="container">
       <div className="header-container">
         <h2>Posiciones</h2>
         <ul>
-          <li>
-            <div className="switch">
-              <input
-                id="switch-1"
-                type="checkbox"
-                name="Center"
-                checked={posiciones.Center}
-                onChange={handleCheckboxChange}
-                className="switch-input"
-              />
-              <label htmlFor="switch-1" className="switch-label">
-                Switch
-              </label>
-            </div>{" "}
-            Center
-          </li>
-          <li>
-            <div className="switch">
-              <input
-                id="switch-2"
-                type="checkbox"
-                name="Guard"
-                checked={posiciones.Guard}
-                onChange={handleCheckboxChange}
-                className="switch-input"
-              />
-              <label htmlFor="switch-2" className="switch-label">
-                Switch
-              </label>
-            </div>{" "}
-            Guard
-          </li>
-          <li>
-            <div className="switch">
-              <input
-                id="switch-3"
-                type="checkbox"
-                name="Forward"
-                checked={posiciones.Forward}
-                onChange={handleCheckboxChange}
-                className="switch-input"
-              />
-              <label htmlFor="switch-3" className="switch-label">
-                Switch
-              </label>
-            </div>{" "}
-            Forward
-          </li>
+          {/* Mapeando sobre el array de objetos posicionesOptions para generar dinámicamente los elementos de la lista. */}
+          {posicionesOptions.map(({ id, name, label }) => (
+            <li key={name}>
+              <div className="switch">
+                <input
+                  id={id}
+                  type="checkbox"
+                  name={name}
+                  checked={posiciones[name]}
+                  onChange={handleCheckboxChange}
+                  className="switch-input"
+                />
+                <label htmlFor={id} className="switch-label">
+                  Switch
+                </label>
+              </div>{" "}
+              {label}
+            </li>
+          ))}
         </ul>
       </div>
 
