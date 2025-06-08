@@ -4,7 +4,6 @@ import Image from "next/image";
 
 // Importando el paquete loading-request
 import { showLoading, hideLoading } from "loading-request";
-import "loading-request/dist/index.css";
 
 const Jugadores = () => {
   const [jugadores, setJugadores] = useState([]); // Variables de estado para almacenar la lista de jugadores.
