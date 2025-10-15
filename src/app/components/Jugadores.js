@@ -7,6 +7,9 @@ import { showLoading, hideLoading } from "loading-request";
 
 const Jugadores = () => {
   const [jugadores, setJugadores] = useState([]); // Variables de estado para almacenar la lista de jugadores.
+  const [loading, setLoading] = useState(true); // Estado para controlar la carga inicial
+  const [error, setError] = useState(null); // Estado para manejar errores
+
   // Variables de estado para gestionar los filtros de posiciones seleccionadas.
   const [posiciones, setPosiciones] = useState({
     Center: false,
@@ -15,13 +18,37 @@ const Jugadores = () => {
   });
 
   {
-    /* Cargando la lista de jugadores desde un archivo JSON al montar el componente y actualizando el estado con los datos obtenidos. */
+    /* Cargando la lista de jugadores desde la API al montar el componente y actualizando el estado con los datos obtenidos. */
   }
   useEffect(() => {
     const fetchJugadores = async () => {
-      const response = await fetch("/api/api.json");
-      const data = await response.json();
-      setJugadores(data.listaJugadores);
+      try {
+        setLoading(true);
+        setError(null);
+
+        const response = await fetch("https://devsapihub.com/api-players");
+
+        // Verificar si la respuesta es exitosa
+        if (!response.ok) {
+          throw new Error(`Error HTTP: ${response.status}`);
+        }
+
+        const data = await response.json();
+
+        // La API devuelve directamente un array de jugadores
+        if (Array.isArray(data) && data.length > 0) {
+          setJugadores(data);
+        } else if (Array.isArray(data) && data.length === 0) {
+          setJugadores([]);
+        } else {
+          throw new Error("Formato de respuesta inesperado");
+        }
+      } catch (error) {
+        console.error("Error al cargar jugadores:", error);
+        setError(error.message);
+      } finally {
+        setLoading(false);
+      }
     };
 
     fetchJugadores();
@@ -61,9 +88,9 @@ const Jugadores = () => {
     const { Center, Guard, Forward } = posiciones;
     if (Center || Guard || Forward) {
       return (
-        (Center && jugador.posicion.includes("Center")) ||
-        (Guard && jugador.posicion.includes("Guard")) ||
-        (Forward && jugador.posicion.includes("Forward"))
+        (Center && jugador.position.includes("Center")) ||
+        (Guard && jugador.position.includes("Guard")) ||
+        (Forward && jugador.position.includes("Forward"))
       );
     }
     return true;
@@ -75,6 +102,29 @@ const Jugadores = () => {
     { id: "switch-2", name: "Guard", label: "Guard" },
     { id: "switch-3", name: "Forward", label: "Forward" },
   ];
+  // Mostrar mensaje de carga inicial
+  if (loading) {
+    return (
+      <div className="container">
+        <div style={{ textAlign: "center", padding: "2rem" }}>
+          <p>Cargando jugadores...</p>
+        </div>
+      </div>
+    );
+  }
+
+  // Mostrar mensaje de error si ocurre algún problema
+  if (error) {
+    return (
+      <div className="container">
+        <div style={{ textAlign: "center", padding: "2rem", color: "red" }}>
+          <h3>Error al cargar los jugadores</h3>
+          <p>{error}</p>
+        </div>
+      </div>
+    );
+  }
+
   return (
     <div className="container">
       <div className="header-container">
@@ -103,32 +153,38 @@ const Jugadores = () => {
       </div>
 
       <ul className="flex-container">
-        {filteredJugadores.map((jugador, index) => (
-          <li key={index} className="flex-item">
-            <Image
-              className="card-img-top"
-              src={jugador.imgSrc}
-              alt={jugador.nombre}
-              width={200}
-              height={200}
-            />
-            <h3>{jugador.nombre}</h3>
-            <p>{jugador.numero}</p>
-            <p>
-              Posición: &nbsp;
-              {jugador.posicion === "Center" && (
-                <span className="position_center"> {jugador.posicion} </span>
-              )}
-              {jugador.posicion === "Guard" && (
-                <span className="position_guard"> {jugador.posicion} </span>
-              )}
-              {jugador.posicion === "Forward" && (
-                <span className="position_forward"> {jugador.posicion} </span>
-              )}
-            </p>
-            <p>Equipo: {jugador.nombreDelEquipo}</p>
+        {filteredJugadores.length > 0 ? (
+          filteredJugadores.map((jugador, index) => (
+            <li key={jugador.id || index} className="flex-item">
+              <Image
+                className="card-img-top"
+                src={jugador.imgSrc}
+                alt={jugador.name}
+                width={200}
+                height={200}
+              />
+              <h3>{jugador.name}</h3>
+              <p>{jugador.number}</p>
+              <p>
+                Posición: &nbsp;
+                {jugador.position.includes("Center") && (
+                  <span className="position_center"> {jugador.position} </span>
+                )}
+                {jugador.position.includes("Guard") && (
+                  <span className="position_guard"> {jugador.position} </span>
+                )}
+                {jugador.position.includes("Forward") && (
+                  <span className="position_forward"> {jugador.position} </span>
+                )}
+              </p>
+              <p>Equipo: {jugador.teamName}</p>
+            </li>
+          ))
+        ) : (
+          <li style={{ textAlign: "center", width: "100%", padding: "2rem" }}>
+            <p>No se encontraron jugadores con los filtros seleccionados.</p>
           </li>
-        ))}
+        )}
       </ul>
     </div>
   );

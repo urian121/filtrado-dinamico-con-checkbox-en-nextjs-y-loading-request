@@ -9,8 +9,8 @@
     "lint": "next lint"
   },
   "dependencies": {
-    "loading-request": "^2.12.0",
-    "next": "14.2.4",
+    "loading-request": "^2.21.0",
+    "next": "^14.2.33",
     "react": "^18",
     "react-dom": "^18"
   },
